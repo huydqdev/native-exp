@@ -9,13 +9,17 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.huydqdev.nativeexp"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.huydqdev.nativeexp"
     },
     "web": {
       "bundler": "metro",
@@ -24,6 +28,17 @@
     },
     "plugins": [
       "expo-router",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
       [
         "expo-splash-screen",
         {
