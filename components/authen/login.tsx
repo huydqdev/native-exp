@@ -12,9 +12,9 @@ const Login = () => {
         try {
             await auth().signInWithEmailAndPassword(email, password);
             // Optionally, you can fetch user data from the database here
-            const userId = auth()?.currentUser?.uid;
-            const userData = await database().ref(`/users/${userId}`).once('value');
-            console.log(userData.val());
+            // const userId = auth()?.currentUser?.uid;
+            // const userData = await database().ref(`/users/${userId}`).once('value');
+            // console.log(userData.val());
         } catch (error: any) {
             setErrorMessage(error?.message);
         }
