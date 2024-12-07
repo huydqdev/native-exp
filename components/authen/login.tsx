@@ -10,7 +10,8 @@ const Login = () => {
 
     const handleLogin = async () => {
         try {
-            await auth().signInWithEmailAndPassword(email, password);
+            // await auth()?.AuthCredential(email, password);
+            // await auth()?.signInWithEmailLink(email,password )
             // Optionally, you can fetch user data from the database here
             // const userId = auth()?.currentUser?.uid;
             // const userData = await database().ref(`/users/${userId}`).once('value');
@@ -47,10 +48,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        padding: 16,
+        padding: 66,
+        width: '100%',
     },
     input: {
         height: 40,
+        width: '100%',
+        borderRadius: 24,
         borderColor: 'gray',
         borderWidth: 1,
         marginBottom: 12,
