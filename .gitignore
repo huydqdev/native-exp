@@ -41,3 +41,6 @@ app-example
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
+
+/android
+/ios
